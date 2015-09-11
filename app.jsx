@@ -1,11 +1,8 @@
 'use strict';
 
-// import React from 'react';
-// import DummyComponent from './components/dummyComponent';
-import dummy from './dummyFile';
+import React from 'react';
+import Presentation from './components/Presentation';
 
 let mainContainerDiv = document.getElementById('main-container');
 
-// React.render(<DummyComponent />, mainContainerDiv);
-
-mainContainerDiv.appendChild(dummy);
+React.render(<Presentation />, mainContainerDiv);
