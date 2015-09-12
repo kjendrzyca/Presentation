@@ -1,6 +1,7 @@
 import React from 'react';
 import Agenda from './agenda';
 import Slide from './slide';
+import Switcher from './switcher';
 
 let PropTypes = React.PropTypes;
 
@@ -17,10 +18,10 @@ let Presentation = React.createClass({
         };
     },
 
-    _handleItemClick (slideNumber) {
+    _handleSlideChange (newSlideNumber) {
         this.setState(() => {
             return {
-                currentSlideNumber: slideNumber
+                currentSlideNumber: newSlideNumber
             };
         });
     },
@@ -29,8 +30,14 @@ let Presentation = React.createClass({
         return (
             <div className="Presentation">
                 <Agenda
-                    handleItemClick={this._handleItemClick}
+                    handleItemClick={this._handleSlideChange}
                     items={this.props.agendaItems}
+                />
+
+                <Switcher
+                    availableSlidesNumbers={Array.from(this.props.slides.keys())}
+                    currentSlideNumber={this.state.currentSlideNumber}
+                    handleSlideChange={this._handleSlideChange}
                 />
 
                 <Slide
