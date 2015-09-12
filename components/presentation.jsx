@@ -1,9 +1,16 @@
 import React from 'react';
 import Agenda from './agenda';
 import Slide from './slide';
-import {agendaItems, slides} from '../presentationSchema';
+
+let PropTypes = React.PropTypes;
 
 let Presentation = React.createClass({
+
+    propTypes: {
+        agendaItems: PropTypes.array.isRequired,
+        slides: PropTypes.instanceOf(Map).isRequired
+    },
+
     getInitialState () {
         return {
             currentSlideNumber: 1
@@ -23,11 +30,11 @@ let Presentation = React.createClass({
             <div className="Presentation">
                 <Agenda
                     handleItemClick={this._handleItemClick}
-                    items={agendaItems}
+                    items={this.props.agendaItems}
                 />
 
                 <Slide
-                    slideData={slides.get(this.state.currentSlideNumber)}
+                    slideData={this.props.slides.get(this.state.currentSlideNumber)}
                 />
             </div>
         );
