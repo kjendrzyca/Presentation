@@ -6,14 +6,14 @@ import {agendaItems, slides} from '../presentationSchema';
 let Presentation = React.createClass({
     getInitialState () {
         return {
-            currentSlideId: 1
+            currentSlideNumber: 1
         };
     },
 
-    _handleItemClick (slideId) {
+    _handleItemClick (slideNumber) {
         this.setState(() => {
             return {
-                currentSlideId: slideId
+                currentSlideNumber: slideNumber
             };
         });
     },
@@ -27,7 +27,7 @@ let Presentation = React.createClass({
                 />
 
                 <Slide
-                    slideData={slides.get(this.state.currentSlideId)}
+                    slideData={slides.get(this.state.currentSlideNumber)}
                 />
             </div>
         );

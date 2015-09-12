@@ -8,15 +8,15 @@ let Agenda = React.createClass({
         items: PropTypes.array.isRequired
     },
 
-    _itemClicked (slideId) {
-        this.props.handleItemClick(slideId);
+    _itemClicked (slideNumber) {
+        this.props.handleItemClick(slideNumber);
     },
 
     _getItems () {
         return this.props.items.map((item) => {
             return (
                 <div>
-                    <a href="#" onClick={this._itemClicked.bind(null, item.slideId)}>{item.title}</a>
+                    <a href="#" onClick={this._itemClicked.bind(null, item.slideNumber)}>{item.title}</a>
                 </div>
             );
         });

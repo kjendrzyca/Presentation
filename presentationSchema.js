@@ -1,14 +1,20 @@
+import images from './images/images';
+
 export let agendaItems = [
     {
-        slideId: 1,
+        slideNumber: 1,
         title: 'intro'
     },
     {
-        slideId: 2,
+        slideNumber: 2,
+        title: 'just dragon'
+    },
+    {
+        slideNumber: 10,
         title: 'webpack'
     },
     {
-        slideId: 3,
+        slideNumber: 20,
         title: 'react'
     }
 ];
@@ -24,12 +30,20 @@ export let slides = new Map([
     [
         2,
         {
+            title: 'dragon',
+            text: 'some text',
+            image: images.dragon
+        }
+    ],
+    [
+        10,
+        {
             title: 'webpack',
             text: 'some webpack text'
         }
     ],
     [
-        3,
+        20,
         {
             title: 'react',
             text: 'some react text'
