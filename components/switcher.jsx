@@ -1,4 +1,5 @@
 import React from 'react';
+import './switcher.css';
 
 let PropTypes = React.PropTypes;
 

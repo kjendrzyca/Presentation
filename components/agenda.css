@@ -1,0 +1,23 @@
+.Agenda {
+    background-color: #34495e;
+    float: left;
+    font-family: Helvetica;
+    height: 100%;
+    width: 20%;
+}
+
+.Agenda a {
+    color: #ecf0f1;
+    display: block;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.Agenda a:first-child {
+    margin-top: 50px;
+}
+
+.Agenda a:hover {
+    background-color: #16a085;
+}

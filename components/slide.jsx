@@ -1,4 +1,6 @@
 import React from 'react';
+import './slide.css';
+
 let PropTypes = React.PropTypes;
 
 let Slide = React.createClass({
@@ -18,8 +20,8 @@ let Slide = React.createClass({
         return (
             <div className="Slide">
                 <h1>{this.props.slideData.title}</h1>
-                <div>{this.props.slideData.text}</div>
-                <div>{this._showImage()}</div>
+                <div className="slide-content">{this.props.slideData.text}</div>
+                <div className="slide-image">{this._showImage()}</div>
             </div>
         );
     }

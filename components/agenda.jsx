@@ -1,4 +1,6 @@
 import React from 'react';
+import './agenda.css';
+
 let PropTypes = React.PropTypes;
 
 let Agenda = React.createClass({
@@ -15,9 +17,7 @@ let Agenda = React.createClass({
     _getItems () {
         return this.props.items.map((item) => {
             return (
-                <div>
-                    <a href="#" onClick={this._itemClicked.bind(null, item.slideNumber)}>{item.title}</a>
-                </div>
+                <a href="#" onClick={this._itemClicked.bind(null, item.slideNumber)}>{item.title}</a>
             );
         });
     },

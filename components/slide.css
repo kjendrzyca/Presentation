@@ -1,0 +1,14 @@
+.Slide {
+    color: #2c3e50;
+    float: left;
+    height: 100%;
+    width: 80%;
+}
+
+.Slide h1 {
+    margin: 20px;
+}
+
+.slide-content {
+    margin: 20px;
+}

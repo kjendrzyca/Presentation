@@ -1,0 +1,21 @@
+.Switcher {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.Switcher button {
+    background-color: #ea6153;
+    border: 0;
+    border-radius: 2px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    height: 30px;
+    margin-left: 25px;
+    width: 50px;
+}
+
+.Switcher button:hover {
+    background-color: #e67e22;
+}

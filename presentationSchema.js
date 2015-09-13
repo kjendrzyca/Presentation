@@ -1,5 +1,11 @@
 import images from './images/images';
 
+export let cssOptions = {
+    float: 'left',
+    height: 768,
+    width: 1024
+};
+
 export let agendaItems = [
     {
         slideNumber: 1,
