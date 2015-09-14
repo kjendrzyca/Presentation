@@ -17,7 +17,7 @@ let Agenda = React.createClass({
     _getItems () {
         return this.props.items.map((item) => {
             return (
-                <a href="#" onClick={this._itemClicked.bind(null, item.slideNumber)}>{item.title}</a>
+                <a href="#" key={item.slideNumber} onClick={this._itemClicked.bind(null, item.slideNumber)}>{item.title}</a>
             );
         });
     },
