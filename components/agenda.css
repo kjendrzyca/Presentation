@@ -3,7 +3,9 @@
     float: left;
     font-family: Helvetica;
     height: 100%;
+    position: fixed;
     width: 20%;
+    transition: margin 0.5s;
 }
 
 .Agenda a {

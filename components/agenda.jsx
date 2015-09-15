@@ -7,6 +7,7 @@ let Agenda = React.createClass({
 
     propTypes: {
         handleItemClick: PropTypes.func.isRequired,
+        isAgendaOpen: PropTypes.bool.isRequired,
         items: PropTypes.array.isRequired
     },
 
@@ -22,9 +23,17 @@ let Agenda = React.createClass({
         });
     },
 
+    _getElementStyle () {
+        if (this.props.isAgendaOpen) {
+            return {'margin-left': '-20%'};
+        }
+
+        return {'margin-left': 0};
+    },
+
     render () {
         return (
-            <div className="Agenda">
+            <div className="Agenda" style={this._getElementStyle()}>
                 {this._getItems()}
             </div>
         );

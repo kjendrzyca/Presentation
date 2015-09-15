@@ -15,7 +15,8 @@ let Presentation = React.createClass({
 
     getInitialState () {
         return {
-            currentSlideNumber: 1
+            currentSlideNumber: 1,
+            isAgendaOpen: false
         };
     },
 
@@ -27,11 +28,20 @@ let Presentation = React.createClass({
         });
     },
 
+    _toggleAgenda () {
+        this.setState((oldState) => {
+            return {
+                isAgendaOpen: !oldState.isAgendaOpen
+            };
+        });
+    },
+
     render () {
         return (
             <div className="Presentation" style={this.props.cssOptions}>
                 <Agenda
                     handleItemClick={this._handleSlideChange}
+                    isAgendaOpen={this.state.isAgendaOpen}
                     items={this.props.agendaItems}
                 />
 
@@ -43,6 +53,7 @@ let Presentation = React.createClass({
                     availableSlidesNumbers={Array.from(this.props.slides.keys())}
                     currentSlideNumber={this.state.currentSlideNumber}
                     handleSlideChange={this._handleSlideChange}
+                    toggleAgenda={this._toggleAgenda}
                 />
             </div>
         );

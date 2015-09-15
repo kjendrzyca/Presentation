@@ -8,7 +8,8 @@ let Switcher = React.createClass({
     propTypes: {
         availableSlidesNumbers: PropTypes.array.isRequired,
         currentSlideNumber: PropTypes.number.isRequired,
-        handleSlideChange: PropTypes.func.isRequired
+        handleSlideChange: PropTypes.func.isRequired,
+        toggleAgenda: PropTypes.func.isRequired
     },
 
     _prevSlide () {
@@ -17,6 +18,10 @@ let Switcher = React.createClass({
 
     _nextSlide () {
         this._setNewSlideNumber(this.props.currentSlideNumber + 1);
+    },
+
+    _toggleAgenda () {
+        this.props.toggleAgenda();
     },
 
     _setNewSlideNumber (newSlideNumber) {
@@ -35,6 +40,7 @@ let Switcher = React.createClass({
         return (
             <div className="Switcher">
                 <button onClick={this._prevSlide}> prev </button>
+                <button onClick={this._toggleAgenda}> toggle </button>
                 <button onClick={this._nextSlide}> next </button>
             </div>
         );
