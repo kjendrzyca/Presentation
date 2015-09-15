@@ -25,10 +25,10 @@ let Agenda = React.createClass({
 
     _getElementStyle () {
         if (this.props.isAgendaOpen) {
-            return {'margin-left': '-20%'};
+            return {'margin-left': 0};
         }
 
-        return {'margin-left': 0};
+        return {'margin-left': '-20%'};
     },
 
     render () {
