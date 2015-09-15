@@ -2,7 +2,9 @@ import images from './images/images';
 
 export let cssOptions = {
     float: 'left',
+    'font-family': 'Open Sans Condensed, sans-serif',
     height: 768,
+    'text-align': 'center',
     width: 1024
 };
 

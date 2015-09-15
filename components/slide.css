@@ -6,9 +6,11 @@
 }
 
 .Slide h1 {
+    font-size: 4em;
     margin: 20px;
 }
 
 .slide-content {
+    font-size: 2em;
     margin: 20px;
 }
