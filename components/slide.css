@@ -1,7 +1,9 @@
 .Slide {
     color: #2c3e50;
     float: left;
+    font-family: 'Open Sans Condensed', sans-serif;
     height: 100%;
+    text-align: center;
     width: 100%;
 }
 

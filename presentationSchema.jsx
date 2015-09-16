@@ -1,10 +1,8 @@
 import images from './images/images';
+import React from 'react';
 
 export let cssOptions = {
-    float: 'left',
-    'font-family': 'Open Sans Condensed, sans-serif',
     height: 768,
-    'text-align': 'center',
     width: 1024
 };
 
@@ -24,6 +22,10 @@ export let agendaItems = [
     {
         slideNumber: 20,
         title: 'react'
+    },
+    {
+        slideNumber: 30,
+        title: 'custom html'
     }
 ];
 
@@ -39,7 +41,7 @@ export let slides = new Map([
         2,
         {
             title: 'dragon',
-            text: 'some text',
+            text: 'some other text',
             image: images.dragon
         }
     ],
@@ -55,6 +57,14 @@ export let slides = new Map([
         {
             title: 'react',
             text: 'some react text'
+        }
+    ],
+    [
+        30,
+        {
+            title: 'custom component',
+            text: 'some react text',
+            customHtml: <div>custom data</div>
         }
     ]
 ]);

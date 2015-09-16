@@ -4,8 +4,9 @@
     font-family: Helvetica;
     height: 100%;
     position: fixed;
-    width: 20%;
+    text-align: center;
     transition: margin 0.5s;
+    width: 20%;
 }
 
 .Agenda a {
