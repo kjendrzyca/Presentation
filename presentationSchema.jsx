@@ -1,5 +1,6 @@
 import images from './images/images';
 import React from 'react';
+import CustomElement from './components/customElement';
 
 export let cssOptions = {
     height: 768,
@@ -64,7 +65,7 @@ export let slides = new Map([
         {
             title: 'custom component',
             text: 'some react text',
-            customHtml: <div>custom data</div>
+            customHtml: <CustomElement />
         }
     ]
 ]);
