@@ -7,7 +7,9 @@ let CustomElement = React.createClass({
             elements: [
                 'Batman',
                 'Robin',
-                'Catwomen'
+                'Catwomen',
+                'Two Face',
+                'Joker'
             ],
             searchtext: ''
         };
@@ -16,13 +18,9 @@ let CustomElement = React.createClass({
     _getElements () {
         let elements = this.state.elements;
 
-        let filterdElements = elements.filter((ele) => {
-            return ele.indexOf(this.state.searchtext)  > -1;
-        });
-
-        return filterdElements.map((ele) => {
-            return <div>{ele}</div>;
-        });
+        return elements
+            .filter(element => element.indexOf(this.state.searchtext) > -1)
+            .map(element => <div key={element}>{element}</div>);
     },
 
     _searchTextChanged () {
