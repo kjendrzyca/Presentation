@@ -16,3 +16,13 @@
     font-size: 2em;
     margin: 20px;
 }
+
+.slide-image img{
+    max-height: 500px;
+}
+
+ul {
+    line-height: 1.6;
+    list-style: none;
+    padding: 0;
+}

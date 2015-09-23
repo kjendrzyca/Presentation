@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from 'lodash';
 import Agenda from './agenda';
 import Slide from './slide';
 import Switcher from './switcher';
@@ -8,7 +9,7 @@ let Presentation = React.createClass({
 
     getInitialState () {
         return {
-            currentSlideNumber: 1,
+            currentSlideNumber: 0,
             isAgendaOpen: false
         };
     },
@@ -39,11 +40,11 @@ let Presentation = React.createClass({
                 />
 
                 <Slide
-                    slideData={presentationData.slides.get(this.state.currentSlideNumber)}
+                    slideData={presentationData.slides[this.state.currentSlideNumber]}
                 />
 
                 <Switcher
-                    availableSlidesNumbers={Array.from(presentationData.slides.keys())}
+                    availableSlidesNumbers={_.range(presentationData.slides.length)}
                     currentSlideNumber={this.state.currentSlideNumber}
                     handleSlideChange={this._handleSlideChange}
                     toggleAgenda={this._toggleAgenda}
