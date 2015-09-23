@@ -13,7 +13,7 @@ let Slide = React.createClass({
         let image = this.props.slideData.image;
         if (image) {
             return (<div className="slide-image">
-                        <img src={image} />;
+                        <img src={image} />
                     </div>);
         }
     },
