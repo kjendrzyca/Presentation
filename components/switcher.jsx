@@ -27,6 +27,7 @@ let Switcher = React.createClass({
     _setNewSlideNumber (newSlideNumber) {
         if (this.props.availableSlidesNumbers.indexOf(newSlideNumber) > -1) {
             this.props.handleSlideChange(newSlideNumber);
+            return;
         }
 
         alert('no such slide');
