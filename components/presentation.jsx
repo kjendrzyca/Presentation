@@ -34,6 +34,7 @@ let Presentation = React.createClass({
         return (
             <div className="Presentation" style={presentationData.cssOptions}>
                 <Agenda
+                    currentSlideNumber={this.state.currentSlideNumber}
                     handleItemClick={this._handleSlideChange}
                     isAgendaOpen={this.state.isAgendaOpen}
                     items={presentationData.agendaItems}
