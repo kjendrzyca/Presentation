@@ -9,63 +9,48 @@ export let cssOptions = {
 
 export let agendaItems = [
     {
-        slideNumber: 1,
+        slideNumber: 0,
         title: 'intro'
     },
     {
-        slideNumber: 2,
+        slideNumber: 1,
         title: 'just dragon'
     },
     {
-        slideNumber: 10,
+        slideNumber: 2,
         title: 'webpack'
     },
     {
-        slideNumber: 20,
+        slideNumber: 3,
         title: 'react'
     },
     {
-        slideNumber: 30,
+        slideNumber: 4,
         title: 'custom html'
     }
 ];
 
-export let slides = new Map([
-    [
-        1,
-        {
-            title: 'someintro',
-            text: 'some text'
-        }
-    ],
-    [
-        2,
-        {
-            title: 'dragon',
-            text: 'some other text',
-            image: images.dragon
-        }
-    ],
-    [
-        10,
-        {
-            title: 'webpack',
-            text: 'some webpack text'
-        }
-    ],
-    [
-        20,
-        {
-            title: 'react',
-            text: 'some react text'
-        }
-    ],
-    [
-        30,
-        {
-            title: 'custom component',
-            text: 'some react text',
-            customHtml: <CustomElement />
-        }
-    ]
-]);
+export let slides = [
+    {
+        title: 'someintro',
+        text: 'some text'
+    },
+    {
+        title: 'dragon',
+        text: 'some other text',
+        image: images.dragon
+    },
+    {
+        title: 'webpack',
+        text: 'some webpack text'
+    },
+    {
+        title: 'react',
+        text: 'some react text'
+    },
+    {
+        title: 'custom component',
+        text: 'some react text',
+        customHtml: <CustomElement />
+    }
+];
