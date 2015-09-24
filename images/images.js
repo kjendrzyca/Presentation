@@ -15,5 +15,6 @@ export default {
     spaghetti: require('./spaghetti.png'),
     rabbit: require('./rabbit.png'),
     prezes: require('./prezes.jpg'),
-    tarnas: require('./tarnas.jpg')
+    tarnas: require('./tarnas.jpg'),
+    today: require('./today.png')
 };
