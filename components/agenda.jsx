@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import './agenda.css';
 
 let PropTypes = React.PropTypes;
@@ -6,6 +7,7 @@ let PropTypes = React.PropTypes;
 let Agenda = React.createClass({
 
     propTypes: {
+        currentSlideNumber: PropTypes.number.isRequired,
         handleItemClick: PropTypes.func.isRequired,
         isAgendaOpen: PropTypes.bool.isRequired,
         items: PropTypes.array.isRequired
@@ -17,23 +19,40 @@ let Agenda = React.createClass({
 
     _getItems () {
         return this.props.items.map((item) => {
+            let agendaItemClassNames = classNames({
+                active: this._isActive(item)
+            });
             return (
-                <a href="#" key={item.slideNumber} onClick={this._itemClicked.bind(null, item.slideNumber)}>{item.title}</a>
+                <a className={agendaItemClassNames} href="#" key={item.slideNumber} onClick={this._itemClicked.bind(null, item.slideNumber)}>{item.title}</a>
             );
         });
     },
 
-    _getElementStyle () {
-        if (this.props.isAgendaOpen) {
-            return {marginLeft: 0};
+    _isActive (currentItem) {
+        let itemIndex = this.props.items.indexOf(currentItem);
+
+        if (itemIndex === -1) {
+            return false;
         }
 
-        return {marginLeft: '-20%'};
+        if (itemIndex === this.props.items.length - 1) {
+            return this.props.currentSlideNumber >= currentItem.slideNumber;
+        }
+
+        let nextItem = this.props.items[itemIndex + 1];
+
+        return this.props.currentSlideNumber >= currentItem.slideNumber && this.props.currentSlideNumber < nextItem.slideNumber;
+    },
+
+    _getElementStyle () {
+        return {
+            marginLeft: this.props.isAgendaOpen ? 0 : '-20%'
+        };
     },
 
     render () {
         return (
-            <div className="Agenda" style={this._getElementStyle()}>
+            <div className={classNames('Agenda')} style={this._getElementStyle()}>
                 {this._getItems()}
             </div>
         );

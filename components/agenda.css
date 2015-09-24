@@ -24,3 +24,15 @@
 .Agenda a:hover {
     background-color: #16a085;
 }
+
+.Agenda a.active {
+    font-size: 1.2em;
+}
+
+.Agenda a.active::before {
+    content: '>> ';
+}
+
+.Agenda a.active::after {
+    content: ' <<';
+}
