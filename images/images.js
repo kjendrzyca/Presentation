@@ -16,5 +16,6 @@ export default {
     rabbit: require('./rabbit.png'),
     prezes: require('./prezes.jpg'),
     tarnas: require('./tarnas.jpg'),
-    today: require('./today.png')
+    today: require('./today.png'),
+    barcamp: require('./barcamp.jpg')
 };
