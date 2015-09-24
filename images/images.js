@@ -13,5 +13,7 @@ export default {
     events: require('./events.png'),
     cleancode: require('./cleanCode.jpg'),
     spaghetti: require('./spaghetti.png'),
-    rabbit: require('./rabbit.png')
+    rabbit: require('./rabbit.png'),
+    prezes: require('./prezes.jpg'),
+    tarnas: require('./tarnas.jpg')
 };
