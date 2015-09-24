@@ -3,6 +3,7 @@ import _ from 'lodash';
 import Agenda from './agenda';
 import Slide from './slide';
 import Switcher from './switcher';
+import KeyboardSwitcher from './KeyboardSwitcher';
 import * as presentationData from '../presentationSchema';
 
 let Presentation = React.createClass({
@@ -47,6 +48,13 @@ let Presentation = React.createClass({
                     availableSlidesNumbers={_.range(presentationData.slides.length)}
                     currentSlideNumber={this.state.currentSlideNumber}
                     handleSlideChange={this._handleSlideChange}
+                    toggleAgenda={this._toggleAgenda}
+                />
+
+                <KeyboardSwitcher
+                    currentSlideNumber={this.state.currentSlideNumber}
+                    handleSlideChange={this._handleSlideChange}
+                    slidesCount={presentationData.slides.length}
                     toggleAgenda={this._toggleAgenda}
                 />
             </div>
