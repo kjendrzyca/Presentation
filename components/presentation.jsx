@@ -4,7 +4,7 @@ import Agenda from './agenda';
 import Slide from './slide';
 import Switcher from './switcher';
 import KeyboardSwitcher from './KeyboardSwitcher';
-import * as presentationData from '../presentationSchema';
+import * as presentationData from '../theRealDeal';
 
 let Presentation = React.createClass({
 
