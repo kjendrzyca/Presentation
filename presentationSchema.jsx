@@ -1,7 +1,3 @@
-import images from './images/images';
-import React from 'react';
-import CustomElement from './components/customElement';
-
 export let cssOptions = {
     height: 768,
     width: 1024
@@ -9,48 +5,15 @@ export let cssOptions = {
 
 export let agendaItems = [
     {
-        slideNumber: 0,
-        title: 'intro'
+        title: 'Toolset'
     },
     {
-        slideNumber: 1,
-        title: 'just dragon'
+        title: 'Frameworks'
     },
     {
-        slideNumber: 2,
-        title: 'webpack'
+        title: 'Code Example'
     },
     {
-        slideNumber: 3,
-        title: 'react'
-    },
-    {
-        slideNumber: 4,
-        title: 'custom html'
-    }
-];
-
-export let slides = [
-    {
-        title: 'someintro',
-        text: 'some text'
-    },
-    {
-        title: 'dragon',
-        text: 'some other text',
-        image: images.dragon
-    },
-    {
-        title: 'webpack',
-        text: 'some webpack text'
-    },
-    {
-        title: 'react',
-        text: 'some react text'
-    },
-    {
-        title: 'custom component',
-        text: 'some react text',
-        customHtml: <CustomElement />
+        title: 'Trend'
     }
 ];
