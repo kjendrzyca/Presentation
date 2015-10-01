@@ -104,7 +104,7 @@ export let slides = [
         image: images.events
     },
     {
-        title: 'No state',
+        title: 'No mutable state',
         image: images.globalstate
     },
     {

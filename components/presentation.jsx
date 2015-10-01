@@ -33,7 +33,7 @@ let Presentation = React.createClass({
 
     render () {
         return (
-            <div className="Presentation" style={presentationData.cssOptions}>
+            <div className="Presentation">
                 <Agenda
                     currentSlideNumber={this.state.currentSlideNumber}
                     handleItemClick={this._handleSlideChange}
