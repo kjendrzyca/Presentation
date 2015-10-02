@@ -71,7 +71,7 @@ export let slides = [
             <ul>
                 <li>Webpack</li>
                 <li>Hot Reload</li>
-                <li>ES6</li>
+                <li>ES2015(ES6)</li>
                 <li>JSX</li>
             </ul>
         )
