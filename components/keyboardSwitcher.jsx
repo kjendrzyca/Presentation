@@ -78,7 +78,7 @@ let KeyboardSwitcher = React.createClass({
     },
 
     render () {
-        return <div></div>;
+        return null;
     }
 });
 

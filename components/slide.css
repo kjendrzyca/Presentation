@@ -5,19 +5,20 @@
     height: 100%;
     text-align: center;
     width: 100%;
+    font-size:2rem;
 }
 
 .Slide h1 {
-    font-size: 4em;
+    font-size: 3em;
     margin: 20px;
 }
 
-.slide-content {
+.Slide p {
     font-size: 2em;
     margin: 20px;
 }
 
-.slide-image img{
+.Slide img {
     max-height: 500px;
 }
 
