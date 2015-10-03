@@ -6,9 +6,9 @@ let PropTypes = React.PropTypes;
 let Switcher = React.createClass({
 
     propTypes: {
-        availableSlidesNumbers: PropTypes.array.isRequired,
         currentSlideNumber: PropTypes.number.isRequired,
         handleSlideChange: PropTypes.func.isRequired,
+        slidesCount: PropTypes.number.isRequired,
         toggleAgenda: PropTypes.func.isRequired
     },
 
@@ -25,7 +25,7 @@ let Switcher = React.createClass({
     },
 
     _setNewSlideNumber (newSlideNumber) {
-        if (this.props.availableSlidesNumbers.indexOf(newSlideNumber) > -1) {
+        if (newSlideNumber >= 0 && newSlideNumber < this.props.slidesCount) {
             this.props.handleSlideChange(newSlideNumber);
             return;
         }
