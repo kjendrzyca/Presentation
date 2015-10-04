@@ -128,17 +128,17 @@ export let slides = [
     {
         title: 'Interested?',
         customHtml: (
-            <div style={{textAlign:'center'}}>
+            <div style={{textAlign: 'center'}}>
                 <br/>
                 <a href="https://github.com/TheOneYouDontLike/Presentation" target="about:blank">https://github.com/TheOneYouDontLike/Presentation</a>
                 <br/>
                 <div>
-                    <div style={{display:'inline-block', margin:'2em'}}>
+                    <div style={{display: 'inline-block', margin: '2em'}}>
                         <img src={images.prezes}/>
                     <br/>
                         <p>@kjendrzyca <a href="http://aimforsimplicity.com" target="about:blank">aimforsimplicity.com</a></p>
                     </div>
-                    <div  style={{display:'inline-block', margin:'2em'}}>
+                    <div  style={{display: 'inline-block', margin: '2em'}}>
                         <img src={images.tarnas}/>
                     <br/>
                         <p>@tarnas14</p>

@@ -1,5 +1,4 @@
 import React from 'react';
-import _ from 'lodash';
 import Agenda from './agenda';
 import Slide from './slide';
 import Switcher from './switcher';
