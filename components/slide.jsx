@@ -10,7 +10,7 @@ let Slide = React.createClass({
     },
 
     _showImage () {
-        let image = this.props.slideData.image;
+        const image = this.props.slideData.image;
         if (image) {
             return (<div className="slide-image">
                         <img src={image} />
@@ -19,7 +19,7 @@ let Slide = React.createClass({
     },
 
     _getCustomSlideData () {
-        let customHtml = this.props.slideData.customHtml;
+        const customHtml = this.props.slideData.customHtml;
         return customHtml ? customHtml : null;
     },
 

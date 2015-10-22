@@ -19,17 +19,23 @@ let Agenda = React.createClass({
 
     _getItems () {
         return this.props.items.map((item) => {
-            let agendaItemClassNames = classNames({
+            const agendaItemClassNames = classNames({
                 active: this._isActive(item)
             });
             return (
-                <a className={agendaItemClassNames} href="#" key={item.slideNumber} onClick={this._itemClicked.bind(null, item.slideNumber)}>{item.title}</a>
+                <a
+                    className={agendaItemClassNames}
+                    href="#" key={item.slideNumber}
+                    onClick={this._itemClicked.bind(null, item.slideNumber)}
+                >
+                    {item.title}
+                </a>
             );
         });
     },
 
     _isActive (currentItem) {
-        let itemIndex = this.props.items.indexOf(currentItem);
+        const itemIndex = this.props.items.indexOf(currentItem);
 
         if (itemIndex === -1) {
             return false;
@@ -39,7 +45,7 @@ let Agenda = React.createClass({
             return this.props.currentSlideNumber >= currentItem.slideNumber;
         }
 
-        let nextItem = this.props.items[itemIndex + 1];
+        const nextItem = this.props.items[itemIndex + 1];
 
         return this.props.currentSlideNumber >= currentItem.slideNumber && this.props.currentSlideNumber < nextItem.slideNumber;
     },
