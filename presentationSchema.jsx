@@ -130,7 +130,7 @@ export let slides = [
         customHtml: (
             <div style={{textAlign: 'center'}}>
                 <br/>
-                <a href="https://github.com/TheOneYouDontLike/Presentation" target="about:blank">https://github.com/TheOneYouDontLike/Presentation</a>
+                <a href="https://github.com/kjendrzyca/Presentation" target="about:blank">https://github.com/TheOneYouDontLike/Presentation</a>
                 <br/>
                 <div>
                     <div style={{display: 'inline-block', margin: '2em'}}>
